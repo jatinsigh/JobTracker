@@ -74,7 +74,31 @@ public class UserController {
 		return userSkillsInterface.save(userskill);
 	}
 	
+	@PostMapping(value="/users/adduserprofile")
+	public Userprofile addUserProfile(@RequestBody Userprofile userprofile)
+	{
+		return userProfileInterface.save(userprofile);
+	}
 	
+	@GetMapping(value="users/updateuser")
+	public User updateUser(@RequestBody User user)
+	{
+		return userInterface.updateUser(user);
+	}
+	
+	@GetMapping (value="users/updateuserskill")
+	public Userskills updateUserSkill(@RequestBody Userskills userskills)
+	{
+		return userSkillsInterface.updateUserSkill(userskills);
+	}
+	
+	@GetMapping (value="users/updateuserprofile")
+	public Userprofile updateUserProfile(@RequestBody Userprofile userprofile)
+	{
+		return userProfileInterface.updateUserProfile(userprofile);
+	}
+	
+	//public Userprofile updateUserProfile()
 //	@PostMapping(value="/users/adduserprofile")
 	//public Userprofile saveUserProfile(@RequestBody Userprofile userprofile)
 	//{

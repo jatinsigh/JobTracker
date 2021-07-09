@@ -41,11 +41,7 @@ public interface IUserInterface extends JpaRepository<User, String>{
 	  @Query(value="UPDATE user set userid=? , email= ? , password= ? , status=? where userid= ?", nativeQuery= true)
 	  public User updateUser(User user);
 	 
-	   @Query(value="UPDATE Profile set userid=?, firstname=?, lastname=?, mobilenumber=?, workExperience=? where userid=?", nativeQuery=true)
-	   public Userprofile updateUserProfile(Userprofile userprofile);
-	   
-	   @Query(value="UPDATE userskills set userSkillId=? , userskill=?, userid=? WHERE userid=?", nativeQuery=true)
-	   public Userskills updateUserSkill(Userskills userskills);
+	  
 	  
 		// @Query(value="DELETE FROM user WHERE userid= ? ", nativeQuery=true)
 		// public List<User> deleteUser(int userid);
