@@ -68,12 +68,12 @@ public class AdminController {
 	}
 //	#2)deleteUserbyId
 	@DeleteMapping(value="/user/delete/{id}")
-	public void deleteUser(@PathVariable String id) {
+	public void deleteUser(@PathVariable Integer id) {
 		admindao.deleteById(id);
 	}
 //	#3)select user by Id
-	@GetMapping(value="/user/{id}")
-	public Optional<User> readUser(@PathVariable String id){
+	@GetMapping(value="/user/id/{id}")
+	public Optional<User> readUser(@PathVariable Integer id){
 		return admindao.findById(id);
 	}
 	
@@ -91,7 +91,7 @@ public class AdminController {
 
 
 //	#6)get job post by id	
-	@GetMapping(value="/jobpost/{id}")
+	@GetMapping(value="/jobpost/id/{id}")
 	public Optional<Jobpost> getJobPostById(@PathVariable int id){
 		return jobdao.findById(id);
 	}
@@ -104,13 +104,13 @@ public class AdminController {
 	
 //	#8)delete user log by id
 	@DeleteMapping(value="/userlog/delete/{id}")
-	public void deleteUserLog(@PathVariable String id) {
+	public void deleteUserLog(@PathVariable Integer id) {
 		userlogdao.deleteById(id);
 	}
 //	#9)get all user logs
 	
 	@GetMapping(value="/userlogs")
-	public List<Userlog> getAllUserLogs(@PathVariable int id){
+	public List<Userlog> getAllUserLogs(){
 		return userlogdao.findAll();
 	}
 	

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.example.demo.entity.User;
 import com.example.demo.entity.Userlog;
 
-public interface IAdmin extends JpaRepository <User,String> {
+public interface IAdmin extends JpaRepository <User,Integer> {
 //	2) AdminInterface- 
 //	Insert(Job, User),
 //	Delete(Job, User),
