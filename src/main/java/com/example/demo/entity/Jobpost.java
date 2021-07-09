@@ -14,16 +14,16 @@ public class Jobpost {
 	@Id
 	private int jobId;
 	
-	@Column
+	@Column(name = "jobRole")
 	private String jobRole;
 	
-	@Column
+	@Column(name = "postedOn")
 	private Timestamp postedOn;
 	
-	@Column
+	@Column(name = "companyName")
 	private String companyName;
 	
-	@Column
+	@Column(name = "companyUrl")
 	private String companyUrl;
 	
 	public Jobpost() {
