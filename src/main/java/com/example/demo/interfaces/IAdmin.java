@@ -13,6 +13,16 @@ public interface IAdmin extends JpaRepository <User,String> {
 //	(update,Delete,view)UserLog,
 //,ViewUser, ViewJob
 	
+//	#1)insert user
+//	#2)deleteUserbyId
+//	#3)select user by Id
+//	#4)delete job post by id
+//	#5)insert job post
+//	#6)get job post by id
+//	#7)update user log status
+//	#8)delete user log by id
+//	#9)get all user logs
+	
 	// @Query(value="insert into user(email, password, status) values(?1, ?2,
 	// ?3)",nativeQuery=true)
 	// public boolean insertUser(User user);
@@ -28,8 +38,7 @@ public interface IAdmin extends JpaRepository <User,String> {
 //	@Query(value="select * from jobpost where jobId=?1",nativeQuery=true)
 //	public Optional<Jobpost> getJobpostById(int id);
 //	
-	@Query(value="update userlog set JobStatus=?1 where userid=?2",nativeQuery=true)
-	public boolean updateUserlogStatus(Userlog userlog);
+	
 	// @Query(value="delete from userlog where userLogId=?1",nativeQuery=true)
 	// public boolean deleteUserlogById(int id);
 //	@Query(value="select * from userlog",nativeQuery=true)
