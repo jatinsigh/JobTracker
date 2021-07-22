@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import com.example.demo.interfaces.IUserlog;
 
 @RestController
 @RequestMapping(value="/admin")
+@CrossOrigin
 public class AdminController {
 
 	@Autowired
@@ -56,10 +58,10 @@ public class AdminController {
 		return "Welcome to Admin";
 	}
 
-//	@GetMapping("/alljobs")
-//	public List<Jobpost> getAllJobs() {
-//		return jobdao.findAll();
-//	}
+	@GetMapping("/alljobs")
+	public List<Jobpost> getAllJobs() {
+		return jobdao.findAll();
+	}
 
 //	#1)insert user
 	@PostMapping("/user/add")
